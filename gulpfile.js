@@ -73,7 +73,7 @@ function startwatch()
 {
   watch('src/js/**/*.js', scripts)
   watch('src/*.html', html)
-  watch('src/css/*.scss', styles)
+  watch('src/scss/*.scss', styles)
   watch('src/images/*', images)
   watch('src/fonts/*', fonts)
 }

@@ -1,0 +1,12 @@
+.top-ad {
+  background-color: $main_color;
+  padding: 15px 20px;
+
+  &__text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+}

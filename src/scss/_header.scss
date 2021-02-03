@@ -1,10 +1,21 @@
 .header {
-  display: flex;
-  height: 60px;
+  background-color: $light_color;
+  border-bottom: 1px solid $grey;
+  border-top: 1px solid $grey;
+
+  &__content {
+    display: flex;
+    height: 60px;
+  }
+
+  &__col {
+    flex: 0 0 50%;
+  }
 }
 
 .logo {
   height: 100%;
+  line-height: 60px;
 }
 
 .header-nav {
@@ -18,14 +29,13 @@
 
   &__item {
     height: 100%;
-    margin-right: 20px;
+    margin-right: 40px;
   }
 
   &__link {
     height: 100%;
     display: flex;
     align-items: center;
-    text-transform: uppercase;
     color: black;
 
     &:hover {
