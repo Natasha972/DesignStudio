@@ -1,0 +1,41 @@
+.txt-block {
+  width: 100%;
+  max-width: 400px;
+  padding: 0 20px;
+
+  &__tag {
+    display: block;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: $grey;
+    font-weight: 500;
+  }
+
+  &__title {
+    font-family: 'Cormorant';
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    color: $grey;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 40px;
+    line-height: 1;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 15px;
+    width: 30px;
+  }
+}
