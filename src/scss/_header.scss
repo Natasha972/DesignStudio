@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  height: 60px;
+}
+
+.logo {
+  height: 100%;
+}
+
+.header-nav {
+  height: 100%;
+
+  &__list {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    height: 100%;
+    margin-right: 20px;
+  }
+
+  &__link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: black;
+
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
