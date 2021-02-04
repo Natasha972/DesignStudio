@@ -1,0 +1,66 @@
+.subscribe {
+  background-color: $dark_grey;
+  padding: 20px 0;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    flex: 0 0 49%;
+
+    &:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 300px;
+  }
+
+  &__form {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-family: 'Cormorant';
+    font-size: 28px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+  }
+
+  &__btn {
+    position: relative;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: 'inherit';
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+    line-height: 1;
+    padding-right: 40px;
+
+    img {
+      position: absolute;
+      right: 0;
+      width: 30px;
+      height: auto;
+    }
+  }
+}
