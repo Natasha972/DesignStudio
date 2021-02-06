@@ -82,6 +82,7 @@ function jslibs() {
   return src([
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/swiper/swiper-bundle.min.js',
+    'node_modules/handlebars/dist/handlebars.min.js'
   ])
   .pipe(concat('libs.min.js'))
   .pipe(dest('dist/js/'))

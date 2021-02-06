@@ -49,12 +49,12 @@
         </div>
       </div>
       <div class="mainscreen__col">
-        <div class="txt-block">
-          <span class="txt-block__tag">lorem</span>
-          <h2 class="txt-block__title">Great Room & Dining Nook</h2>
-          <p class="txt-block__desc">
+        <div class="text-block">
+          <span class="text-block__tag">lorem</span>
+          <h3 class="text-block__title">Great Room & Dining Nook</h3>
+          <p class="text-block__desc">
             Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <img src="images/arrow-bold.svg" alt="arrow" class="txt-block__arrow">
+            <img src="images/arrow-bold.svg" alt="arrow" class="text-block__arrow">
           </p>
         </div>
       </div>
@@ -70,12 +70,12 @@
               <div class="img-block__image">
                 <img src="images/interior3.jpg" alt="interior" class="image">
               </div>
-              <div class="txt-block">
-                <span class="txt-block__tag">lorem</span>
-                <h2 class="txt-block__title">Great Room & Dining Nook</h2>
-                <p class="txt-block__desc">
+              <div class="text-block">
+                <span class="text-block__tag">lorem</span>
+                <h3 class="text-block__title">Dream Home</h3>
+                <p class="text-block__desc">
                   Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  <img src="images/arrow-bold.svg" alt="arrow" class="txt-block__arrow">
+                  <img src="images/arrow-bold.svg" alt="arrow" class="text-block__arrow">
                 </p>
               </div>
             </div>
@@ -85,12 +85,12 @@
               <div class="img-block__image">
                 <img src="images/interior1.jpg" alt="interior" class="image">
               </div>
-              <div class="txt-block">
-                <span class="txt-block__tag">lorem</span>
-                <h2 class="txt-block__title">Great Room & Dining Nook</h2>
-                <p class="txt-block__desc">
+              <div class="text-block">
+                <span class="text-block__tag">lorem</span>
+                <h3 class="text-block__title">Great Room & Dining Nook</h3>
+                <p class="text-block__desc">
                   Lorem ipsum dolor sit amet.
-                  <img src="images/arrow-bold.svg" alt="arrow" class="txt-block__arrow">
+                  <img src="images/arrow-bold.svg" alt="arrow" class="text-block__arrow">
                 </p>
               </div>
             </div>
@@ -119,7 +119,17 @@
         </div>
       </div>
     </section>
-    <section class="blog"></section>
+    <section class="posts">
+      <div class="container">
+        <div class="posts__content">
+          <div id="lg-posts" class="posts__col"></div>
+          <div class="posts__col">
+            <div id="sm-posts1" class="posts__subcol"></div>
+            <div id="sm-posts2" class="posts__subcol"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="bestsellers"></section>
     <section class="lifestyle"></section>
     <section class="arrivals"></section>
@@ -127,6 +137,42 @@
     <footer class="footer"></footer>
   </div>
   <script src="js/libs.min.js"></script>
+  <script type="text/x-handlebars-template" id="lg-post-template">
+    {{#each lg_posts}}
+      <article class="lg-post post" data-post-id={{id}}>
+        <div class="lg-post__image post__image">
+          <img class="image" src="{{image}}"/>
+        </div>
+        <div class="text-block">
+          <span class="text-block__tag">{{tag}}</span>
+          <a href="#" class="text-block__title">{{title}}</a>
+          <p class="text-block__desc">
+            {{desc}}
+            <img src="images/arrow-bold.svg" alt="arrow" class="text-block__arrow">
+          </p>
+        </div>
+      </article>
+    {{/each}}
+  </script>
+  <script  type="text/x-handlebars-template" id="sm-post-template">
+    {{#each sm_posts}}
+      <article class="sm-post post" data-post-id="{{id}}">
+        {{#if short}}
+          <div class="sm-post__image post__image short">
+            <img class="image" src="{{image}}"/>
+          </div>
+          {{else}}
+          <div class="sm-post__image post__image tall">
+            <img class="image" src="{{image}}"/>
+          </div>
+        {{/if}}
+        <div class="sm-post__caption">
+          <span class="sm-post__tag">{{tag}}</span>
+          <a href="#" class="sm-post__title">{{title}}</a>
+        </div>
+      </article>
+    {{/each}}
+  </script>
   <script src="js/main.min.js"></script>
 </body>
 </html>
