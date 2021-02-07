@@ -22,21 +22,17 @@
   }
 
   &__desc {
-    position: relative;
-    display: inline-block;
+    display: block;
     max-width: 100%;
     color: $grey;
-    text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
-    padding-right: 40px;
-    line-height: 1;
+    line-height: 1.2;
+    max-height: 2.4;
+    margin-bottom: 20px;
   }
 
   &__arrow {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: block;
     height: 15px;
     width: 30px;
   }

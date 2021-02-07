@@ -43,4 +43,17 @@ $(function() {
       rendered = compiled({ sm_posts: sm_posts_2 })
       $('#sm-posts2').html(rendered)
  }
+
+ const swiper = new Swiper('.swiper-container', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 20,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 })
